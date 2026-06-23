@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+venv/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Raw documents
+raw/*.pdf
+
+# Streamlit app files
+app.py
+app2.py
+app3.py
+app4_sidebar_wiki.py
+app6_QA_index_search.py
