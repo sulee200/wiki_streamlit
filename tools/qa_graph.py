@@ -6,6 +6,7 @@ import os
 import re
 import sys
 
+import streamlit as st
 from dotenv import load_dotenv
 from rank_bm25 import BM25Okapi
 from google import genai
@@ -245,7 +246,7 @@ def get_gemini_client():
 def get_llama_client():
     load_dotenv(PROJECT_ROOT / ".env")
 
-    api_key = os.getenv("Llama_API_KEY")
+    api_key = st.secrets.get("Llama_API_KEY") or os.getenv("Llama_API_KEY")
 
     if not api_key:
         raise ValueError("Llama_API_KEY was not loaded. Check .env file")
